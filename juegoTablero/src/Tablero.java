@@ -35,9 +35,6 @@ public class Tablero {
             while (jugadores2[i] == null){
                 int NR1 = (int)(Math. random()*5);
 
-                System.out.println(NR1);
-                
-
                 if (jugadores[NR1]!=null){
                     jugadores2[i] = jugadores[NR1];
                     jugadores[NR1] = null;
@@ -45,16 +42,12 @@ public class Tablero {
             }
         }
         jugadores = jugadores2;
-        
-        System.out.println("prueba random arreglos;");
-        for (Integer i = 0; i < 5; i++){
-            System.out.println(jugadores[i].getColor());
-        }
 
 
     }
 
     public void iniciarJuego(){
+        System.out.println("-------------El juego acabad de comenzar-------------");
         int fin = 0;
         int ron = 1;
         int ganador = 0;
@@ -88,5 +81,12 @@ public class Tablero {
 
     public Integer getCantCas(){
         return cantCasillas;
+    }
+
+    public void getJugadores(){
+        System.out.println("Lista de jugadores");
+        for (Integer i = 0; i < 5; i++){
+            System.out.println(jugadores[i].getColor());
+        }
     }
 }
